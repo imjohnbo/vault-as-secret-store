@@ -16,15 +16,15 @@ jobs:
 
     # The env context is not pre-populated with the self hosted runner's environment variables
     # https://help.github.com/en/actions/reference/context-and-expression-syntax-for-github-actions#env-context
-    - name: Add masks for environment variables
-      run: |
-        echo "::add-mask::$ROLE_ID"
-        echo "::add-mask::$SECRET_ID"
+    # - name: Add masks for environment variables
+    #   run: |
+    #     echo "::add-mask::$ROLE_ID"
+    #     echo "::add-mask::$SECRET_ID"
 
-    - name: Set environment variables
-      run: |
-        echo "::set-env name=ROLE_ID::$ROLE_ID"
-        echo "::set-env name=SECRET_ID::$SECRET_ID"
+    # - name: Set environment variables
+    #   run: |
+    #     echo "::set-env name=ROLE_ID::$ROLE_ID"
+    #     echo "::set-env name=SECRET_ID::$SECRET_ID"
 
     - name: Import Secrets
       uses: RichiCoder1/vault-action@v1.0.1
