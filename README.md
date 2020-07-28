@@ -15,7 +15,7 @@ First go through these setup steps, adapted from this original Vault tutorial, [
 1. (self hosted runner host) Set up a [self hosted runner](https://help.github.com/en/actions/hosting-your-own-runners/about-self-hosted-runners).
 1. (Vault host) Download, install, and start up Vault on a machine which is network-connected to the self hosted runner. [eg. [steps](https://learn.hashicorp.com/vault/operations/ops-deployment-guide)]
 1. (Vault host) Create a new policy `actions` based on [`actions-policy.hcl`](actions-policy.hcl). [eg. [steps](https://www.vaultproject.io/docs/concepts/policies#creating-policies)]
-1. (Vault host) Enable the AppRole authentication method, create a named role `actions` with the `actions` policy attached, and fetch the RoleID and SecretID. [eg. [steps](https://www.vaultproject.io/docs/auth/approle#via-the-cli-1)]
+1. (Vault host) Enable the AppRole authentication method, create a named role `actions` with the `actions` policy attached, and fetch the RoleID and SecretID. [eg. [steps](https://learn.hashicorp.com/vault/developer/approle#step-2-create-a-role-with-policy-attached)]
 1. (self hosted runner host) Export the RoleID and SecretID as environment variables:
 
 ```
